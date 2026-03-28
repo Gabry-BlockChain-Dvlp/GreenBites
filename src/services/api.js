@@ -9,7 +9,7 @@ export const getRandomRecipes = async () => {
 };
 
 export const searchRecipes = async (query) => {
-    const response = await fetch(`${BASE_URL}/complexSearch?apiKey=${API_KEY}&query=${encodeURIComponent(query)}&include-tags=vegetarian&number=1`);
+    const response = await fetch(`${BASE_URL}/complexSearch?apiKey=${API_KEY}&query=${encodeURIComponent(query)}&diet=vegetarian&number=1`);
     const data = await response.json();
     return data.results ?? [];
 }

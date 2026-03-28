@@ -26,7 +26,7 @@ function showDetails() {
           </div>
           <div className="movie-info">
               <h3>{recipe?.title}</h3>
-              {ingredientNames.length > 0 ? <p>{ingredientNames.join(", ")}</p> : null}
+              {ingredientNames.length > 0 ? <p>{ingredientNames}</p> : null}
               <button 
               className="details-button"
                 onClick={showDetails}>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getRecipeDetails } from "../services/api";
+import "../css/RecipeDetails.css";
 
 function RecipeDetails() {
   const { id } = useParams();
@@ -43,9 +44,24 @@ function RecipeDetails() {
           alt={recipe.title ?? "Recipe"}
         />
       </div>
-      <h1>{recipe.title}</h1>
+      <div className="recipe-info">
+        <h1>{recipe.title}</h1>
+        {recipe.extendedIngredients ? (
+          <div>
+            <h3>Ingredients:</h3>
+            <ul className="ingredients-list">
+              {recipe.extendedIngredients.map((ingredient) => (
+                <li key={ingredient.id}>{ingredient.name}  {ingredient.amount}  {ingredient.unit}</li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+      <p>{recipe.instructions}</p>
+      <h3>Health Score: {recipe.healthScore}</h3>
+      </div>
+      <h3 className="summary">Summary:</h3>
       {recipe.summary ? (
-        <div dangerouslySetInnerHTML={{ __html: recipe.summary }} />
+        <div className="recipe-summary" dangerouslySetInnerHTML={{ __html: recipe.summary }} />
       ) : null}
     </div>
   );

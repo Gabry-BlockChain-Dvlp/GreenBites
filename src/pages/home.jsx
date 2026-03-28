@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { searchRecipes, getRandomRecipes } from "../services/api";
 import "../css/Home.css";
 import RecipeCard from "../components/recipeCard";
+import Hero from "../components/hero";
 
 function Home() {
     const [searchQuery, setSearchQuery] = useState("");
@@ -46,6 +47,7 @@ function Home() {
 
     return (
         <div className="home">
+            <Hero />
             <form onSubmit={handleSearch} className="search-form">
                 <input
                     className="search-input"
