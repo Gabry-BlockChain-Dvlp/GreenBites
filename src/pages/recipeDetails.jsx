@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getRecipeDetails } from "../services/api";
+import FavoriteButton from "../components/FavouriteButton";
 import "../css/RecipeDetails.css";
 
-function RecipeDetails() {
+function RecipeDetails({ user, favIds, toggleFavorite }) {
   const { id } = useParams();
   const [recipe, setRecipe] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -42,6 +43,12 @@ function RecipeDetails() {
         <img
           src={recipe.image ?? `https://img.spoonacular.com/recipes/${recipe.id}-312x231.jpg`}
           alt={recipe.title ?? "Recipe"}
+        />
+             <FavoriteButton
+          recipe={recipe}
+          favIds={favIds}
+          toggleFavorite={toggleFavorite}
+          user={user}
         />
       </div>
       <div className="recipe-info">

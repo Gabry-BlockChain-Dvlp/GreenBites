@@ -4,7 +4,7 @@ import "../css/Home.css";
 import RecipeCard from "../components/recipeCard";
 import Hero from "../components/hero";
 
-function Home() {
+function Home({ user, favIds, toggleFavorite }) {
     const [searchQuery, setSearchQuery] = useState("");
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -67,12 +67,16 @@ function Home() {
                 <div className="movies-grid">
                     {(Array.isArray(recipes) ? recipes : []).map((recipe) => (
                         (recipe?.title ?? "").toLowerCase().startsWith(searchQuery.toLowerCase()) && 
-                        <RecipeCard key={recipe.id} recipe={recipe} />
+                        <RecipeCard
+                          key={recipe.id}
+                          recipe={recipe}
+                          user={user}
+                          favIds={favIds}
+                          toggleFavorite={toggleFavorite}
+                        />
                     ))}
                 </div>
             )}
-
-
         </div>
     );
 }

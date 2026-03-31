@@ -1,0 +1,19 @@
+.favorites-page h1 {
+  text-align: center;
+  margin: 2rem 0 1.5rem;
+}
+
+.favorites-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 4rem;
+  font-size: 1.1rem;
+}
+
+.favorites-empty button {
+  padding: 8px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
