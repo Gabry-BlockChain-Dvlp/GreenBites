@@ -4,7 +4,7 @@
 
 <img width="1902" height="906" alt="GrennBitesScreenù" src="https://github.com/user-attachments/assets/90e187d8-a478-4224-95a7-f848300c8404" />
 
-> 🌐 **Live Demo:** [your-deployment-url.web.app](https://greenbites-8ea40.web.app/)
+> 🌐 **Live Demo:** (https://greenbites-8ea40.web.app/)
 
 
 ## ✨ Features
