@@ -2,6 +2,8 @@
 
 **GreenBites** is a modern vegetarian recipe app built with React. Browse hundreds of plant-based recipes, search by ingredient or name, and save your favorites — all synced in real time to your personal account.
 
+![GreenBitesScreenshoot](../assets/GrrenBitesScreenù.png)
+
 > 🌐 **Live Demo:** [your-deployment-url.web.app](https://greenbites-8ea40.web.app/)
 
 
